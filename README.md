@@ -11,17 +11,27 @@ plain English, and shows where it happened in 3D.
 above. Blue and purple lines are the two camera paths. Every marked change
 was detected automatically.*
 
-```text
-- moved:   The spray bottle moved from next to the stapler to next to the cosmetics jar.
-- moved:   The glasses moved from next to the wallet to between the cosmetics jar and the wallet.
-- moved:   The pen moved from next to the notebook to next to the power bank.
-- removed: The watch was removed from between the cosmetics jar and the stapler.
-- removed: The mouse was removed from next to the sticky note.
-- added:   A remote control was added between the sticky note and the notebook.
-```
+| Change | Report |
+|---|---|
+| **Moved** | The spray bottle moved from next to the stapler to next to the cosmetics jar. |
+| **Moved** | The glasses moved from next to the wallet to between the cosmetics jar and the wallet. |
+| **Moved** | The pen moved from next to the notebook to next to the power bank. |
+| **Removed** | The watch was removed from between the cosmetics jar and the stapler. |
+| **Removed** | The mouse was removed from next to the sticky note. |
+| **Added** | A remote control was added between the sticky note and the notebook. |
 
-(The "stapler" is the earbuds case and the "sticky note" is a yellow notepad.
-Names come from an open vocabulary, so they are close but not always exact.)
+> [!NOTE]
+> The "stapler" is the earbuds case and the "sticky note" is a yellow notepad.
+> Names come from an open vocabulary, so they are close but not always exact.
+
+## Contents
+
+- [Results](#results)
+- [How it works](#how-it-works)
+- [Design choices and trade-offs](#design-choices-and-trade-offs)
+- [Limitations](#limitations)
+- [Running it](#running-it)
+- [Repository layout](#repository-layout)
 
 ## Results
 
@@ -48,7 +58,9 @@ cameras.
 
 | Removed: watch | Added: remote | Moved: pen |
 |---|---|---|
-| ![](outputs/scene_B/evidence/03_removed_watch.jpg) | ![](outputs/scene_B/evidence/05_added_remote_control.jpg) | ![](outputs/scene_B/evidence/02_moved_pen.jpg) |
+| ![Watch removed: before and after crops](outputs/scene_B/evidence/03_removed_watch.jpg) | ![Remote added: before and after crops](outputs/scene_B/evidence/05_added_remote_control.jpg) | ![Pen moved: before and after crops](outputs/scene_B/evidence/02_moved_pen.jpg) |
+
+### Output files
 
 Each run writes:
 
@@ -151,7 +163,7 @@ yellow notepad, so the notepad dominates both crops. That is why the second
 check exists: it asks whether the spot still looks like *the mouse*, not
 whether the region looks the same.
 
-### Limitations
+## Limitations
 
 - **Thresholds were tuned on these two pairs.** The gaps above are wide, but
   they come from one scene. New rooms or lighting may need re-checking, and
@@ -171,6 +183,8 @@ whether the region looks the same.
 
 Tested on Windows 11, Python 3.11, CPU only.
 
+### 1. Install
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate            # Linux/macOS: source .venv/bin/activate
@@ -182,6 +196,8 @@ pip install --no-deps https://github.com/facebookresearch/vggt/archive/refs/head
 Model weights download automatically on first run: VGGT-1B (~5 GB, from
 Hugging Face), YOLO-World (`yolov8s-worldv2.pt`, 25 MB) and CLIP ViT-B/32.
 
+### 2. Run
+
 ```bash
 python scene_change_3d.py --before videos/parent.mp4 --after videos/20261016_025401.mp4 --out-dir outputs/scene_B
 ```
@@ -191,7 +207,9 @@ and detections are cached in the output folder, so re-running (for example
 with different thresholds) takes a few minutes instead of 20. `--help` lists
 every threshold and what it does.
 
-**Recording your own:** two clips of the same area, about 3–7 seconds each,
+### 3. Record your own
+
+Two clips of the same area, about 3–7 seconds each,
 moving slowly. Overlap matters more than coverage. The second clip can take a
 different path, but it should pass over the spots where you changed things.
 Both clips must have the same resolution and orientation.
@@ -206,5 +224,3 @@ Both clips must have the same resolution and orientation.
 | `outputs/scene_A`, `outputs/scene_B` | Full example outputs for both pairs |
 | `docs/earlier_2d_work.md` | The project's first stage: 2D removal detection between videos, and how it evolved |
 | `evaluate.py`, `video_info.py`, `sample_frames.py`, `detect_one.py`, `check_setup.py` | Small tools from the 2D stage |
-#   m i s s i n g - o b j e c t - d e t e c t i o n  
- 
