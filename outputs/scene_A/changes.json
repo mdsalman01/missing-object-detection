@@ -1,0 +1,128 @@
+{
+  "before": "videos/parent.mp4",
+  "after": "videos/20261016_025318.mp4",
+  "frames_per_video": 12,
+  "unchanged_objects": [
+    "cosmetics jar",
+    "figurine",
+    "keyboard",
+    "laptop",
+    "mouse",
+    "notebook",
+    "power bank",
+    "spray bottle",
+    "stapler",
+    "sticky note",
+    "wallet"
+  ],
+  "changes": [
+    {
+      "change": "moved",
+      "object": "glasses",
+      "detector_labels": [
+        "scissors"
+      ],
+      "description": "The glasses moved from next to the wallet to between the cosmetics jar and the power bank.",
+      "position": [
+        0.0506,
+        0.2055,
+        0.7333
+      ],
+      "best_appearance_match": 0.981,
+      "evidence": "evidence/00_moved_glasses.jpg",
+      "moved_to": [
+        -0.0704,
+        0.2328,
+        0.703
+      ],
+      "distance_fraction_of_scene": 0.11
+    },
+    {
+      "change": "moved",
+      "object": "pen",
+      "detector_labels": [
+        "pen",
+        "pencil"
+      ],
+      "description": "The pen moved from next to the notebook to next to the power bank.",
+      "position": [
+        0.6221,
+        0.1249,
+        0.8103
+      ],
+      "best_appearance_match": 0.843,
+      "evidence": "evidence/01_moved_pen.jpg",
+      "moved_to": [
+        -0.2246,
+        0.2174,
+        0.7135
+      ],
+      "distance_fraction_of_scene": 0.736
+    },
+    {
+      "change": "removed",
+      "object": "watch",
+      "detector_labels": [
+        "bottle"
+      ],
+      "description": "The watch was removed from between the spray bottle and the cosmetics jar.",
+      "position": [
+        -0.0816,
+        0.0009,
+        0.9181
+      ],
+      "best_appearance_match": 0.779,
+      "evidence": "evidence/02_removed_watch.jpg",
+      "clear_views_in_other_recording": 8
+    },
+    {
+      "change": "added",
+      "object": "remote control",
+      "detector_labels": [
+        "keyboard",
+        "remote control"
+      ],
+      "description": "A remote control was added between the sticky note and the notebook.",
+      "position": [
+        0.6694,
+        0.2365,
+        0.6792
+      ],
+      "best_appearance_match": 0.846,
+      "evidence": "evidence/03_added_remote_control.jpg",
+      "clear_views_in_other_recording": 4
+    },
+    {
+      "change": "not observed",
+      "object": "bag",
+      "detector_labels": [
+        "bag"
+      ],
+      "description": "The bag between the figurine and the spray bottle was not seen in the second recording, but that recording never had a clear view of its spot, so this is not reported as a change.",
+      "position": [
+        -1.091,
+        -0.619,
+        2.3897
+      ],
+      "best_appearance_match": 0.647,
+      "evidence": "evidence/04_not_observed_bag.jpg",
+      "clear_views_in_other_recording": 0
+    },
+    {
+      "change": "not observed",
+      "object": "bottle",
+      "detector_labels": [
+        "bottle"
+      ],
+      "description": "The bottle between the cosmetics jar and the mouse was not seen in the first recording, but that recording never had a clear view of its spot, so this is not reported as a change.",
+      "position": [
+        0.9203,
+        -0.0802,
+        0.8033
+      ],
+      "best_appearance_match": 0.81,
+      "evidence": "evidence/05_not_observed_bottle.jpg",
+      "clear_views_in_other_recording": 0
+    }
+  ]
+}

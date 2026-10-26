@@ -1,0 +1,147 @@
+{
+  "before": "videos/parent.mp4",
+  "after": "videos/20261016_025401.mp4",
+  "frames_per_video": 12,
+  "unchanged_objects": [
+    "cosmetics jar",
+    "figurine",
+    "headphones",
+    "keyboard",
+    "laptop",
+    "notebook",
+    "power bank",
+    "stapler",
+    "sticky note",
+    "wallet"
+  ],
+  "changes": [
+    {
+      "change": "moved",
+      "object": "spray bottle",
+      "detector_labels": [
+        "bottle"
+      ],
+      "description": "The spray bottle moved from next to the stapler to next to the cosmetics jar.",
+      "position": [
+        -0.0174,
+        -0.0932,
+        0.9679
+      ],
+      "best_appearance_match": 0.894,
+      "evidence": "evidence/00_moved_spray_bottle.jpg",
+      "moved_to": [
+        0.6758,
+        -0.0552,
+        0.9225
+      ],
+      "distance_fraction_of_scene": 0.663
+    },
+    {
+      "change": "moved",
+      "object": "glasses",
+      "detector_labels": [
+        "scissors"
+      ],
+      "description": "The glasses moved from next to the wallet to between the cosmetics jar and the wallet.",
+      "position": [
+        0.0516,
+        0.2118,
+        0.7731
+      ],
+      "best_appearance_match": 0.979,
+      "evidence": "evidence/01_moved_glasses.jpg",
+      "moved_to": [
+        -0.0655,
+        0.2391,
+        0.7388
+      ],
+      "distance_fraction_of_scene": 0.119
+    },
+    {
+      "change": "moved",
+      "object": "pen",
+      "detector_labels": [
+        "pen",
+        "pencil"
+      ],
+      "description": "The pen moved from next to the notebook to next to the power bank.",
+      "position": [
+        0.627,
+        0.1353,
+        0.8393
+      ],
+      "best_appearance_match": 0.876,
+      "evidence": "evidence/02_moved_pen.jpg",
+      "moved_to": [
+        -0.2283,
+        0.2256,
+        0.7511
+      ],
+      "distance_fraction_of_scene": 0.824
+    },
+    {
+      "change": "removed",
+      "object": "watch",
+      "detector_labels": [
+        "bottle"
+      ],
+      "description": "The watch was removed from between the cosmetics jar and the stapler.",
+      "position": [
+        -0.083,
+        0.0011,
+        0.9613
+      ],
+      "best_appearance_match": 0.768,
+      "evidence": "evidence/03_removed_watch.jpg",
+      "clear_views_in_other_recording": 7
+    },
+    {
+      "change": "removed",
+      "object": "mouse",
+      "detector_labels": [
+        "cell phone"
+      ],
+      "description": "The mouse was removed from next to the sticky note.",
+      "position": [
+        0.8055,
+        0.1309,
+        0.8287
+      ],
+      "best_appearance_match": 0.891,
+      "evidence": "evidence/04_removed_mouse.jpg",
+      "clear_views_in_other_recording": 4
+    },
+    {
+      "change": "added",
+      "object": "remote control",
+      "detector_labels": [
+        "remote control"
+      ],
+      "description": "A remote control was added between the sticky note and the notebook.",
+      "position": [
+        0.6704,
+        0.2443,
+        0.719
+      ],
+      "best_appearance_match": 0.846,
+      "evidence": "evidence/05_added_remote_control.jpg",
+      "clear_views_in_other_recording": 4
+    },
+    {
+      "change": "not observed",
+      "object": "bag",
+      "detector_labels": [
+        "bag"
+      ],
+      "description": "The bag between the figurine and the cosmetics jar was not seen in the second recording, but that recording never had a clear view of its spot, so this is not reported as a change.",
+      "position": [
+        -1.0253,
+        -0.5808,
+        2.3042
+      ],
+      "best_appearance_match": 0.648,
+      "evidence": "evidence/06_not_observed_bag.jpg",
+      "clear_views_in_other_recording": 0
+    }
+  ]
+}

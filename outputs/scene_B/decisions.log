@@ -1,0 +1,30 @@
+[before] stapler         mouse                      unchanged: matched 'stapler' sim 0.971, shift 0.006
+[before] laptop          laptop                     unchanged: matched 'laptop' sim 0.964, shift 0.004
+[before] spray bottle    bottle                     MOVED: matched 'marker' sim 0.894, shift 0.663 x scene
+[before] glasses         scissors                   MOVED: matched 'glasses' sim 0.979, shift 0.119 x scene
+[before] wallet          cell phone/tablet          unchanged: matched 'wallet' sim 0.984, shift 0.009
+[before] figurine        figurine/toy               unchanged: matched 'figurine' sim 0.977, shift 0.007
+[before] cosmetics jar   bottle/cup/mug             unchanged: matched 'cosmetics jar' sim 0.987, shift 0.004
+[before] power bank      cell phone/cup/mug         unchanged: matched 'power bank' sim 0.970, shift 0.007
+[before] keyboard        keyboard                   unchanged: matched 'keyboard' sim 0.970, shift 0.036
+[before] pen             pen/pencil                 MOVED: matched 'pencil' sim 0.876, shift 0.824 x scene
+[before] notebook        book                       unchanged: matched 'sticky note' sim 0.889, shift 0.016
+[before] cosmetics jar   cup                        unchanged: matched 'cosmetics jar' sim 0.972, shift 0.017
+[before] cosmetics jar   mouse                      unchanged: matched 'cosmetics jar' sim 0.889, shift 0.005
+[before] sticky note     book                       unchanged: matched 'sticky note' sim 0.870, shift 0.050
+[before] watch           bottle                     no match in other recording (best raw sim 0.768)
+[before] bag             bag                        no match in other recording (best raw sim 0.648)
+[before] watch           scissors                   no match in other recording (best raw sim 0.753)
+[before] mouse           cell phone                 look-alike only far away (sim 0.868, shift 0.471): undecided
+[after ] laptop          keyboard/laptop            was there before (raw detection sim 0.904)
+[after ] remote control  remote control             no match in other recording (best raw sim 0.846)
+[after ] headphones      scissors                   a look-alike was elsewhere before (sim 0.950): kept as a possible move destination
+[after ] headphones      scissors                   no match in other recording (best raw sim 0.950)
+[before] watch           bottle                     not paired with 'headphones': sim 0.768, shift 0.733
+[before] mouse           cell phone                 not paired with 'remote control': sim 0.813, shift 0.198
+[before] watch           bottle                     REMOVED: spot visible in 7 frame(s) and it changed (region sim 0.698; looks like the watch: 0.966 here vs 0.688 there (drop 0.279); 6 views)
+[before] bag             bag                        NOT OBSERVED: its spot is clearly visible in only 0 frame(s) of the other recording
+[before] watch           scissors                   REMOVED: spot visible in 7 frame(s) and it changed (region sim 0.683; looks like the watch: 0.968 here vs 0.703 there (drop 0.264); 6 views)
+[before] mouse           cell phone                 REMOVED: spot visible in 4 frame(s) and it changed (region sim 0.891; looks like the mouse: 0.907 here vs 0.804 there (drop 0.103); 4 views)
+[after ] remote control  remote control             ADDED: spot visible in 4 frame(s) and it changed (region sim 0.785; looks like the remote control: 0.969 here vs 0.755 there (drop 0.214); 4 views)
+[after ] headphones      scissors                   present: its spot looks the same in both recordings (region sim 0.958; looks like the headphones: 0.919 here vs 0.899 there (drop 0.019); 6 views)

@@ -1,0 +1,30 @@
+﻿# Direct dependencies, pinned to the versions this was developed and tested with
+# (Python 3.11, Windows 11, CPU only).
+#
+# VGGT is installed separately with --no-deps (see README): it declares
+# numpy<2, which conflicts with the rest of this stack, but runs fine on numpy 2.
+
+numpy==2.4.6
+scipy==1.17.1
+opencv-python==5.0.0.93
+pillow==12.3.0
+matplotlib==3.11.2
+plotly==7.1.0
+
+torch==2.14.1
+torchvision==0.29.1
+ultralytics==8.4.175
+
+# VGGT runtime dependencies
+huggingface_hub==2.2.0
+einops==0.8.2
+safetensors==0.8.0
+
+# CLIP text/image encoder (used by YOLO-World and for appearance matching).
+# Installed from a zip archive so it works without git on PATH.
+clip @ https://github.com/ultralytics/CLIP/archive/refs/heads/main.zip
+ftfy==6.3.1
+regex==2026.9.29
+
+# Optional: OCR in the earlier 2D pipeline (find_missing.py) only
+pytesseract==0.3.13
