@@ -206,3 +206,5 @@ Both clips must have the same resolution and orientation.
 | `outputs/scene_A`, `outputs/scene_B` | Full example outputs for both pairs |
 | `docs/earlier_2d_work.md` | The project's first stage: 2D removal detection between videos, and how it evolved |
 | `evaluate.py`, `video_info.py`, `sample_frames.py`, `detect_one.py`, `check_setup.py` | Small tools from the 2D stage |
+#   m i s s i n g - o b j e c t - d e t e c t i o n  
+ 
